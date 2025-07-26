@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+  <div id="game-board">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+
+  <h2 id="status">Player X's turn</h2>
+  <button onclick="resetGame()">Reset</button>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+
+  <!-- Firebase Config -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyA6PwXg0q_xhkpZMq8-VYNWnVF4R2xcfSM",
+      authDomain: "tictactoe-9669a.firebaseapp.com",
+      projectId: "tictactoe-9669a",
+      storageBucket: "tictactoe-9669a.firebasestorage.app",
+      messagingSenderId: "980342756755",
+      appId: "1:980342756755:web:93955a6c9d59ef524c4466",
+      measurementId: "G-9MMRLQ5YXV",
+      databaseURL: "https://tictactoe-9669a-default-rtdb.asia-southeast1.firebasedatabase.app/"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Game Logic -->
+  <script src="page.js"></script>
+</body>
+</html>
